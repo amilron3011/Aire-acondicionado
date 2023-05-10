@@ -1,0 +1,16 @@
+class Termostato{
+  
+  constructor(temperatura){
+    this.temperatura=temperatura;
+  }
+  
+  dimeTemperatura(){
+    console.log("Temperatura:",this.temperatura);
+  }
+}
+
+
+function setup() {
+  temperatura1=new Termostato(24);
+  temperatura1.dimeTemperatura();
+}
