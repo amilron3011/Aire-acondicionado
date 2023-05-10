@@ -1,0 +1,38 @@
+class Termostato{
+  
+  constructor(temperatura){
+    this.temperatura=temperatura;
+  }
+  
+  dimeTemperatura(){
+    console.log("Temperatura:",this.temperatura);
+  }
+}
+
+
+class Aire{
+  constructor(){
+    this.termostato=new Termostato("-");
+  }
+  
+  encender(){
+    console.log("On");
+  }
+  
+  apagar(){
+    console.log("Off");
+  }
+  
+  info(){
+    
+    this.termostato.dimeTemperatura();
+  }
+}
+
+let aire1
+
+function setup(){
+  aire1=new Aire();
+  aire1.encender();
+  aire1.info();
+}
