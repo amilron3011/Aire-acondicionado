@@ -1,0 +1,61 @@
+class Termostato{
+  
+  constructor(){
+    
+  }
+  
+  dimeTemperatura(temperatura){
+    console.log("Temperatura:",temperatura);
+  }
+}
+class Aire{
+  constructor(){
+    this.termostato=new Termostato();
+  }
+  
+  encender(){
+    console.log("On");
+  }
+  
+  apagar(){
+    console.log("Off");
+  }
+  
+}
+class Frio extends Aire{
+    constructor(){
+    super()
+    this.modo="-";
+  }
+  
+  encender(){
+   console.log("On");
+   this.temperatura=20 ;
+   this.modo="Frío";
+   console.log("Modo:",this.modo);
+   this.termostato.dimeTemperatura(this.temperatura);
+  }
+    
+}
+class Calefaccion extends Aire{
+     constructor(){
+    super()
+    this.modo="-";
+  }
+  
+  encender(){
+   console.log("On");
+   this.temperatura= 27 
+   this.modo="Calor"
+   console.log("Modo:",this.modo);
+   this.termostato.dimeTemperatura(this.temperatura); 
+  }
+    
+}
+let airefrio
+let airecalor
+
+ function setup(){
+  airefrio=new Frio();
+  airecalor=new Calefaccion()
+}
