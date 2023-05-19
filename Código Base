@@ -34,10 +34,6 @@ class Frío extends Aire{
     this.modo="-";
   }
   
-  info(temperatura){
-    
-    this.termostato.dimeTemperatura(temperatura);
-  }
   encender(){
    console.log("On");
    this.temperatura=20 ;
